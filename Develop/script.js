@@ -1,18 +1,20 @@
 // Assignment code here
-function getCriteria(){
+
+function generatePassword(){
   var promptText = "Choose a number between 8 and 128.";
   var placeholder = "8";
   var length = parseInt(prompt(promptText, placeholder));
   
-  while (){
-    
-  }
-  console.log(length)
-}
+  promptText = "Sorry, please enter a number between 8 and 128.";
+  while ((length >= 8 && length <= 128) === false) {
+      length = parseInt(prompt(promptText, placeholder));
+    }
 
-function generatePassword(){
-  getCriteria();
-  return "test";
+  var uppercase = confirm("Include uppercase characters?");
+  var numbers = confirm("Include numbers?");
+  var characters = confirm("Include special characters?");
+
+  return pswd;
 }
 
 // Get references to the #generate element
